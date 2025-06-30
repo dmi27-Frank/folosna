@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Payment Confirmation - folosna</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      background-color: #fff;
+    }
+
+    .navbar {
+  background-color: #e67e22;
+  padding: 1rem;
+  color: white;
+  text-align: center;
+}
+
+.navbar .brand {
+  font-weight: bold;
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.nav-links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  background-color: rgba(255, 255, 255, 0.1);
+  padding: 0.4rem 0.8rem;
+  border-radius: 4px;
+  font-size: 0.9rem;
+  transition: background-color 0.3s ease;
+}
+
+.nav-links a:hover {
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+    .container {
+      max-width: 600px;
+      margin: 2rem auto;
+      padding: 2rem;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+      border-radius: 8px;
+      background-color: #fafafa;
+    }
+
+    h1 {
+      text-align: center;
+      color: #333;
+      margin-bottom: 1.5rem;
+    }
+
+    .info-box {
+      background-color: #eef2f3;
+      border: 1px solid #ccc;
+      padding: 1rem;
+      margin-bottom: 1.5rem;
+      border-radius: 5px;
+      color: #333;
+    }
+
+    .checkbox {
+      margin-bottom: 1.5rem;
+    }
+
+    button {
+      width: 100%;
+      background-color: #e67e22;
+      color: white;
+      border: none;
+      padding: 0.75rem;
+      font-size: 1rem;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #cf711c;
+    }
+
+    .footer {
+      text-align: center;
+      margin-top: 2rem;
+      color: #777;
+      font-size: 0.9rem;
+    }
+
+    .print-btn {
+      margin-top: 1rem;
+      background-color: #999;
+    }
+  </style>
+  <script>
+    function printPage() {
+      window.print();
+    }
+  </script>
+</head>
+<body>
+  <div class="navbar">
+  <div class="brand">folosna</div>
+  <div class="nav-links">
+    <a href="folosna_registration.html">Registration</a>
+    <a href="folosna_id_upload.html">ID Upload</a>
+    <a href="folosna_smart_search.html">SmartSearch</a>
+    <a href="folosna_payment_instruction.html">Payment Instruction</a>
+    <a href="folosna_confirmation_page.html">Payment Confirmation</a>
+    <a href="folosna_dashboard.html">User Dashboard</a>
+  </div>
+</div>
+
+
+  <div class="container">
+    <h1>Confirm Your Payment</h1>
+
+    <div class="info-box">
+      <strong>Recipient:</strong><br>
+      Fatima El Gohary<br>
+      National ID: 29001011234567<br>
+      Mobile: +20 100 234 5678
+    </div>
+
+    <div class="info-box">
+      <strong>Sending:</strong> GBP 100<br>
+      <strong>To Bank:</strong> Banque Misr, Downtown Cairo<br>
+      151 Mohamed Farid Street, Cairo, Egypt
+    </div>
+
+    <div class="info-box">
+      <strong>Send your payment to:</strong><br>
+      Bank: NatWest<br>
+      Account Name: Folosna Ltd<br>
+      Account Number: 12345678<br>
+      Sort Code: 60-00-01<br>
+      Reference: SMITH2025
+    </div>
+
+    <div class="checkbox">
+      <input type="checkbox" id="agree" required>
+      <label for="agree">I agree to the <a href="#">terms and conditions</a></label>
+    </div>
+
+    <button type="submit">Confirm and Send</button>
+    <button class="print-btn" onclick="printPage()">Print Confirmation</button>
+
+    <div class="footer">
+      A confirmation email has been sent to you.<br>
+      &copy; 2025 folosna.com
+    </div>
+  </div>
+</body>
+</html>

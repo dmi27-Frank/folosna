@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Verify Identity - folosna</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #fff;
+      margin: 0;
+      padding: 0;
+    }
+
+    .navbar {
+  background-color: #e67e22;
+  padding: 1rem;
+  color: white;
+  text-align: center;
+}
+
+.navbar .brand {
+  font-weight: bold;
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.nav-links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  background-color: rgba(255, 255, 255, 0.1);
+  padding: 0.4rem 0.8rem;
+  border-radius: 4px;
+  font-size: 0.9rem;
+  transition: background-color 0.3s ease;
+}
+
+.nav-links a:hover {
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+
+    .container {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 90vh;
+      padding: 1rem;
+    }
+
+    .form-wrapper {
+      width: 100%;
+      max-width: 400px;
+      padding: 2rem;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+      border-radius: 8px;
+      box-sizing: border-box;
+      text-align: center;
+    }
+
+    h1 {
+      color: #333;
+      margin-bottom: 1rem;
+    }
+
+    p {
+      color: #555;
+      margin-bottom: 1.5rem;
+    }
+
+    input[type="file"] {
+      display: block;
+      margin: 1rem auto;
+      padding: 0.5rem;
+    }
+
+    button {
+      background-color: #e67e22;
+      color: white;
+      border: none;
+      padding: 0.75rem 1.5rem;
+      font-size: 1rem;
+      border-radius: 4px;
+      cursor: pointer;
+      margin-top: 1rem;
+    }
+
+    button:disabled {
+      background-color: #ccc;
+      cursor: not-allowed;
+    }
+
+    .sample-id {
+      margin: 1rem auto;
+      text-align: center;
+    }
+
+    .sample-id img {
+      max-width: 100%;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+
+    .footer {
+      text-align: center;
+      margin-top: 2rem;
+      color: #777;
+      font-size: 0.9rem;
+    }
+  </style>
+  <script>
+    function enableContinue() {
+      const fileInput = document.getElementById('idUpload');
+      const continueBtn = document.getElementById('continueBtn');
+      continueBtn.disabled = !fileInput.files.length;
+    }
+  </script>
+</head>
+<body>
+  <div class="navbar">
+  <div class="brand">folosna</div>
+  <div class="nav-links">
+    <a href="folosna_registration.html">Registration</a>
+    <a href="folosna_id_upload.html">ID Upload</a>
+    <a href="folosna_smart_search.html">SmartSearch</a>
+    <a href="folosna_payment_instruction.html">Payment Instruction</a>
+    <a href="folosna_confirmation_page.html">Payment Confirmation</a>
+    <a href="folosna_dashboard.html">User Dashboard</a>
+  </div>
+</div>
+
+  <div class="container">
+    <div class="form-wrapper">
+      <h1>Verify Your Identity</h1>
+      <p>Thank you for registering. Please upload a valid photo ID to complete your verification.</p>
+
+      <div class="sample-id">
+        <img src="images/drivers_licence.png" alt="Sample UK Driving Licence">
+        <p style="font-size: 0.85rem; color: #777;">Example: UK Driving Licence or Passport</p>
+      </div>
+
+      <input type="file" id="idUpload" name="idUpload" accept="image/*,application/pdf" onchange="enableContinue()" required />
+      <button id="continueBtn" disabled>Continue</button>
+      <div class="footer">&copy; 2025 folosna.com</div>
+    </div>
+  </div>
+</body>
+</html>
